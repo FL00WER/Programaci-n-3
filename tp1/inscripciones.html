@@ -2,25 +2,30 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deportes Unca - Mis inscripciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <header>
-        <h1>Mis inscripciones</h1>
-        <nav>
-            <ul>
-                <li><a href="pagina1.html">Inicio</a></li>
-                <li><a href="pagina1.html#actividades">Actividades deportivas</a></li>
-                <li><a href="pagina2.html">Inscribirse a una actividad</a></li>
-            </ul>
-        </nav>
+        <div class="container-fluid">
+            <h1>Mis inscripciones</h1>
+            <nav>
+                <ul>
+                    <li><a href="pagina1.html">Inicio</a></li>
+                    <li><a href="pagina1.html#actividades">Actividades deportivas</a></li>
+                    <li><a href="pagina2.html">Inscribirse a una actividad</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <table border="1">
-                <thead>
+    <main class="container mt-5 mb-5">
+        <section class="table-responsive">
+            <table class="table table-striped table-hover border">
+                <thead class="table-dark">
                     <tr>
                         <th>Actividad</th>
                         <th>Lugar</th>
@@ -32,28 +37,30 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Fútbol</td>
+                        <td>Futbol</td>
                         <td>Cancha general</td>
-                        <td>Miércoles</td>
+                        <td>Miercoles</td>
                         <td>19:00</td>
-                        <td>Activa</td>
-                        <td><a href="#">Cancelar inscripción</a></td>
+                        <td><span class="badge bg-success">Activa</span></td>
+                        <td><a href="#" class="btn btn-sm btn-danger">Cancelar inscripción</a></td>
                     </tr>
                     <tr>
-                        <td>Vóley</td>
+                        <td>Voley</td>
                         <td>Cancha techada</td>
                         <td>Viernes</td>
                         <td>17:00</td>
-                        <td>Activa</td>
-                        <td><a href="#">Cancelar inscripción</a></td>
+                        <td><span class="badge bg-success">Activa</span></td>
+                        <td><a href="#" class="btn btn-sm btn-danger">Cancelar inscripción</a></td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
 
-    <footer>
-        <p>Deportes Unca &ndash; 2026</p>
+    <footer class="mt-auto">
+        <div class="container">
+            <p>Deportes Unca &ndash; 2026</p>
+        </div>
     </footer>
 
 </body>
