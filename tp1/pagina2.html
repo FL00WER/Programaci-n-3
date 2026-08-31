@@ -2,123 +2,152 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deportes Unca - Inscripción a una actividad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
     <header>
-        <h1>Inscripción a una actividad</h1>
-        <nav>
-            <ul>
-                <li><a href="pagina1.html">Inicio</a></li>
-                <li><a href="pagina1.html#actividades">Actividades deportivas</a></li>
-                <li><a href="inscripciones.html">Mis inscripciones</a></li>
-            </ul>
-        </nav>
+        <div class="container-fluid">
+            <h1>Inscripción a una actividad</h1>
+            <nav>
+                <ul>
+                    <li><a href="pagina1.html">Inicio</a></li>
+                    <li><a href="pagina1.html#actividades">Actividades deportivas</a></li>
+                    <li><a href="inscripciones.html">Mis inscripciones</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <form action="pagina3.html" method="post">
+    <main class="container">
+        <form action="pagina3.html" method="post" id="formulario-inscripcion" class="mt-4">
 
-            <section>
+            <section class="tarjeta-formulario mb-4">
                 <h2>Información de la actividad</h2>
 
-                <label for="actividad">Actividad:</label>
-                <input type="text" id="actividad" name="actividad" value="Futbol" disabled>
-                <br>
+                <div class="mb-3">
+                    <label for="actividad" class="form-label">Actividad:</label>
+                    <input type="text" id="actividad" name="actividad" value="Futbol" class="form-control" disabled>
+                </div>
 
-                <label for="lugar">Lugar:</label>
-                <input type="text" id="lugar" name="lugar" value="Cancha techada" disabled>
-                <br>
+                <div class="mb-3">
+                    <label for="lugar" class="form-label">Lugar:</label>
+                    <input type="text" id="lugar" name="lugar" value="Cancha techada" class="form-control" disabled>
+                </div>
 
-                <label for="dia">Día:</label>
-                <input type="text" id="dia" name="dia" value="Martes y jueves" disabled>
-                <br>
+                <div class="mb-3">
+                    <label for="dia" class="form-label">Día:</label>
+                    <input type="text" id="dia" name="dia" value="Martes y jueves" class="form-control" disabled>
+                </div>
 
-                <label for="horario">Horario:</label>
-                <input type="text" id="horario" name="horario" value="18:00 - 19:30" disabled>
+                <div class="mb-3">
+                    <label for="horario" class="form-label">Horario:</label>
+                    <input type="text" id="horario" name="horario" value="18:00 - 19:30" class="form-control" disabled>
+                </div>
             </section>
 
-            <section>
+            <section class="tarjeta-formulario mb-4">
                 <h2>Datos del participante</h2>
 
-                <label for="nombre">Apellido y nombre:</label>
-                <input type="text" id="nombre" name="nombre" maxlength="100" required>
-                <br>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Apellido y nombre:</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="100" class="form-control" required>
+                </div>
 
-                <label for="dni">DNI:</label>
-                <input type="text" id="dni" name="dni" minlength="8" maxlength="8" required>
-                <br>
+                <div class="mb-3">
+                    <label for="dni" class="form-label">DNI:</label>
+                    <input type="text" id="dni" name="dni" minlength="8" maxlength="8" class="form-control" required>
+                </div>
 
-                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
-                <br>
+                <div class="mb-3">
+                    <label for="fecha_nacimiento" class="form-label">Fecha de nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control">
+                </div>
 
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email">
-                <br>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                </div>
 
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono">
-                <br>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-control">
+                </div>
 
-                <fieldset>
-                    <legend>Sexo:</legend>
+                <fieldset class="mb-3">
+                    <legend class="col-form-label pt-0">Sexo:</legend>
 
-                    <input type="radio" id="sexo_f" name="sexo" value="Femenino">
-                    <label for="sexo_f">Femenino</label>
+                    <div class="form-check">
+                        <input type="radio" id="sexo_f" name="sexo" value="Femenino" class="form-check-input">
+                        <label for="sexo_f" class="form-check-label">Femenino</label>
+                    </div>
 
-                    <input type="radio" id="sexo_m" name="sexo" value="Masculino">
-                    <label for="sexo_m">Masculino</label>
+                    <div class="form-check">
+                        <input type="radio" id="sexo_m" name="sexo" value="Masculino" class="form-check-input">
+                        <label for="sexo_m" class="form-check-label">Masculino</label>
+                    </div>
 
-                    <input type="radio" id="sexo_nb" name="sexo" value="No binario">
-                    <label for="sexo_nb">No binario</label>
+                    <div class="form-check">
+                        <input type="radio" id="sexo_nb" name="sexo" value="No binario" class="form-check-input">
+                        <label for="sexo_nb" class="form-check-label">No binario</label>
+                    </div>
                 </fieldset>
             </section>
 
-            <section>
+            <section class="tarjeta-formulario mb-4">
                 <h2>Información deportiva</h2>
 
-                <label for="nivel">Nivel:</label>
-                <select id="nivel" name="nivel">
-                    <option value="inicial">Inicial</option>
-                    <option value="intermedio">Intermedio</option>
-                    <option value="avanzado">Avanzado</option>
-                </select>
-                <br>
+                <div class="mb-3">
+                    <label for="nivel" class="form-label">Nivel:</label>
+                    <select id="nivel" name="nivel" class="form-select">
+                        <option value="inicial">Inicial</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="avanzado">Avanzado</option>
+                    </select>
+                </div>
 
-                <fieldset>
-                    <legend>¿Posee experiencia previa?</legend>
+                <fieldset class="mb-3">
+                    <legend class="col-form-label pt-0">¿Posee experiencia previa?</legend>
 
-                    <input type="radio" id="experiencia_si" name="experiencia" value="Si">
-                    <label for="experiencia_si">Sí</label>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="experiencia_si" name="experiencia" value="Si" class="form-check-input">
+                        <label for="experiencia_si" class="form-check-label">Sí</label>
+                    </div>
 
-                    <input type="radio" id="experiencia_no" name="experiencia" value="No">
-                    <label for="experiencia_no">No</label>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="experiencia_no" name="experiencia" value="No" class="form-check-input">
+                        <label for="experiencia_no" class="form-check-label">No</label>
+                    </div>
                 </fieldset>
 
-                <label for="observaciones">Observaciones:</label>
-                <br>
-                <textarea id="observaciones" name="observaciones" rows="4" cols="40"></textarea>
+                <div class="mb-3">
+                    <label for="observaciones" class="form-label">Observaciones:</label>
+                    <textarea id="observaciones" name="observaciones" rows="4" class="form-control"></textarea>
+                </div>
             </section>
 
-            <section>
-                <h2>Aceptación de condiciones</h2>
-
-                <input type="checkbox" id="condiciones" name="condiciones" required>
-                <label for="condiciones">Acepto las condiciones de inscripción</label>
+            <section class="mb-4">
+                <div class="form-check">
+                    <input type="checkbox" id="condiciones" name="condiciones" class="form-check-input" required>
+                    <label for="condiciones" class="form-check-label">Acepto las condiciones de inscripción</label>
+                </div>
             </section>
 
-            <section>
-                <button type="submit">Aceptar</button>
-                <button type="reset">Cancelar</button>
+            <section class="mb-5 text-center">
+                <button type="submit" class="btn btn-primary btn-lg px-4 me-2">Aceptar</button>
+                <button type="reset" class="btn btn-secondary btn-lg px-4">Cancelar</button>
             </section>
 
         </form>
     </main>
 
     <footer>
-        <p>Deportes Unca &ndash; 2026</p>
+        <div class="container">
+            <p>Deportes Unca &ndash; 2026</p>
+        </div>
     </footer>
 
 </body>
